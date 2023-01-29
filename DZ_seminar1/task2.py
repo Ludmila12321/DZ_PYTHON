@@ -4,7 +4,7 @@
 number = input('Введите любое трёхзначное число: ')
 if len(number) == 4 and number[0] == '-':
         print('Сумма цифр данного числа равна ', int(number[1]) + int(number[2]) + int(number[3])) # Минус не считаем, т. к. математически минус - не цифра
-elif number[0] == '0' or len(number) != 3:
+elif len(number) != 3 or (len(number) == 3 and number[0] == '0'):
     print('Читайте внимательнее условие! Число должно быть трёхзначным!')
 else:
     for i in range(len(number)):
